@@ -23,6 +23,10 @@ parser.add_argument(
 )
 parser.add_argument("--num_envs", type=int, default=1, help="Number of environments to simulate.")
 parser.add_argument("--task", type=str, default=None, help="Name of the task.")
+parser.add_argument("--seed", type=int, default=42, help="Seed used for terrain generation and playback.")
+parser.add_argument("--terrain_experiment", type=str, default=None, help="Supplementary terrain experiment variant.")
+parser.add_argument("--video_folder", type=str, default=None, help="Optional output directory for the recorded video.")
+parser.add_argument("--skip_export", action="store_true", default=False, help="Skip policy export during playback.")
 parser.add_argument(
     "--use_pretrained_checkpoint",
     action="store_true",
@@ -45,7 +49,9 @@ simulation_app = app_launcher.app
 """Rest everything follows."""
 
 import gymnasium as gym
+import numpy as np
 import os
+import random
 import time
 import torch
 
@@ -64,6 +70,7 @@ export_deploy_policy_as_jit,
 export_deploy_policy_as_onnx,
 )
 from scripts.rsl_rl.vecenv_wrapper import ParkourRslRlVecEnvWrapper
+from scripts.rsl_rl.terrain_experiments import EXPERIMENTS, apply_terrain_experiment
 
 import isaaclab_tasks  # noqa: F401
 from isaaclab_tasks.utils import get_checkpoint_path, parse_env_cfg
@@ -76,6 +83,18 @@ def main():
     env_cfg = parse_env_cfg(
         args_cli.task, device=args_cli.device, num_envs=args_cli.num_envs, use_fabric=not args_cli.disable_fabric
     )
+    if args_cli.terrain_experiment is not None and args_cli.terrain_experiment not in EXPERIMENTS:
+        raise ValueError(
+            f"Unknown terrain experiment '{args_cli.terrain_experiment}'. "
+            f"Available variants: {', '.join(EXPERIMENTS)}"
+        )
+    random.seed(args_cli.seed)
+    np.random.seed(args_cli.seed)
+    torch.manual_seed(args_cli.seed)
+    env_cfg.seed = args_cli.seed
+    env_cfg.scene.terrain.terrain_generator.seed = args_cli.seed
+    if args_cli.terrain_experiment is not None:
+        apply_terrain_experiment(env_cfg, args_cli.terrain_experiment)
     agent_cfg: ParkourRslRlOnPolicyRunnerCfg = cli_args.parse_rsl_rl_cfg(args_cli.task, args_cli)
 
     # specify directory for logging experiments
@@ -103,8 +122,9 @@ def main():
 
     # wrap for video recording
     if args_cli.video:
+        video_folder = args_cli.video_folder or os.path.join(log_dir, "videos", "play")
         video_kwargs = {
-            "video_folder": os.path.join(log_dir, "videos", "play"),
+            "video_folder": os.path.abspath(video_folder),
             "step_trigger": lambda step: step == 0,
             "video_length": args_cli.video_length,
             "disable_logger": True,
@@ -128,31 +148,33 @@ def main():
         policy = ppo_runner.get_inference_depth_policy(device=env.unwrapped.device)
         depth_encoder = ppo_runner.get_depth_encoder_inference_policy(device=env.device)
         policy_nn = ppo_runner.alg.depth_actor
-        export_model_dir = os.path.join(os.path.dirname(resume_path), "exported_deploy")
-        export_deploy_policy_as_jit(policy_nn, 
-                                    estimator,
-                                    depth_encoder,
-                                    ppo_runner.obs_normalizer, 
-                                    path=export_model_dir, 
-                                    filename="policy.pt")
-        export_deploy_policy_as_onnx(
-                            policy_nn, 
-                            estimator,
-                            depth_encoder,
-                            agent_cfg,
-                            normalizer=ppo_runner.obs_normalizer, 
-                            path=export_model_dir, 
-                            filename="policy.onnx"
-                        )
+        if not args_cli.skip_export:
+            export_model_dir = os.path.join(os.path.dirname(resume_path), "exported_deploy")
+            export_deploy_policy_as_jit(policy_nn,
+                                        estimator,
+                                        depth_encoder,
+                                        ppo_runner.obs_normalizer,
+                                        path=export_model_dir,
+                                        filename="policy.pt")
+            export_deploy_policy_as_onnx(
+                                policy_nn,
+                                estimator,
+                                depth_encoder,
+                                agent_cfg,
+                                normalizer=ppo_runner.obs_normalizer,
+                                path=export_model_dir,
+                                filename="policy.onnx"
+                            )
 
     else:
         policy = ppo_runner.get_inference_policy(device=env.unwrapped.device)
         policy_nn = ppo_runner.alg.policy
-        export_model_dir = os.path.join(os.path.dirname(resume_path), "exported_teacher")
-        export_teacher_policy_as_jit(policy_nn, ppo_runner.obs_normalizer, path=export_model_dir, filename="policy.pt")
-        export_teacher_policy_as_onnx(
-            policy_nn, normalizer=ppo_runner.obs_normalizer, path=export_model_dir, filename="policy.onnx"
-        )
+        if not args_cli.skip_export:
+            export_model_dir = os.path.join(os.path.dirname(resume_path), "exported_teacher")
+            export_teacher_policy_as_jit(policy_nn, ppo_runner.obs_normalizer, path=export_model_dir, filename="policy.pt")
+            export_teacher_policy_as_onnx(
+                policy_nn, normalizer=ppo_runner.obs_normalizer, path=export_model_dir, filename="policy.onnx"
+            )
 
     dt = env.unwrapped.step_dt
     estimator_paras = agent_cfg.to_dict()["estimator"]

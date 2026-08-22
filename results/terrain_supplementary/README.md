@@ -71,9 +71,48 @@
 - 教师策略在绝大多数分布外条件下优于学生策略，优势在宽沟槽和窄桥上最明显。
 - 学生策略在标准与中等宽度独木桥上接近教师策略，说明深度视觉足以支持常规宽度下的平衡控制。
 
+## 演示视频
+
+下列 24 段视频与表格中的实验条件一一对应。视频使用随机种子 42、16 个并行环境录制，共 300 帧，分辨率为 1280×720，帧率为 50 FPS。页面中的动画可直接观看，点击动画可打开高清 MP4 原视频。
+
+### 障碍高度、宽度和间距
+
+| 难度 | Teacher | Student |
+|---|---|---|
+| 标准 | [![Teacher 障碍标准](videos/previews/teacher_hurdle_base.webp)](videos/teacher_hurdle_base.mp4) | [![Student 障碍标准](videos/previews/student_hurdle_base.webp)](videos/student_hurdle_base.mp4) |
+| 中等 | [![Teacher 障碍中等](videos/previews/teacher_hurdle_medium.webp)](videos/teacher_hurdle_medium.mp4) | [![Student 障碍中等](videos/previews/student_hurdle_medium.webp)](videos/student_hurdle_medium.mp4) |
+| 困难 | [![Teacher 障碍困难](videos/previews/teacher_hurdle_hard.webp)](videos/teacher_hurdle_hard.mp4) | [![Student 障碍困难](videos/previews/student_hurdle_hard.webp)](videos/student_hurdle_hard.mp4) |
+
+### 台阶高度与连续台阶数量
+
+| 难度 | Teacher | Student |
+|---|---|---|
+| 标准 | [![Teacher 台阶标准](videos/previews/teacher_step_base.webp)](videos/teacher_step_base.mp4) | [![Student 台阶标准](videos/previews/student_step_base.webp)](videos/student_step_base.mp4) |
+| 中等 | [![Teacher 台阶中等](videos/previews/teacher_step_medium.webp)](videos/teacher_step_medium.mp4) | [![Student 台阶中等](videos/previews/student_step_medium.webp)](videos/student_step_medium.mp4) |
+| 困难 | [![Teacher 台阶困难](videos/previews/teacher_step_hard.webp)](videos/teacher_step_hard.mp4) | [![Student 台阶困难](videos/previews/student_step_hard.webp)](videos/student_step_hard.mp4) |
+
+### 沟槽宽度
+
+| 难度 | Teacher | Student |
+|---|---|---|
+| 标准 | [![Teacher 沟槽标准](videos/previews/teacher_gap_base.webp)](videos/teacher_gap_base.mp4) | [![Student 沟槽标准](videos/previews/student_gap_base.webp)](videos/student_gap_base.mp4) |
+| 中等 | [![Teacher 沟槽中等](videos/previews/teacher_gap_medium.webp)](videos/teacher_gap_medium.mp4) | [![Student 沟槽中等](videos/previews/student_gap_medium.webp)](videos/student_gap_medium.mp4) |
+| 困难 | [![Teacher 沟槽困难](videos/previews/teacher_gap_hard.webp)](videos/teacher_gap_hard.mp4) | [![Student 沟槽困难](videos/previews/student_gap_hard.webp)](videos/student_gap_hard.mp4) |
+
+### 独木桥宽度
+
+| 难度 | Teacher | Student |
+|---|---|---|
+| 标准 | [![Teacher 独木桥标准](videos/previews/teacher_beam_base.webp)](videos/teacher_beam_base.mp4) | [![Student 独木桥标准](videos/previews/student_beam_base.webp)](videos/student_beam_base.mp4) |
+| 中等 | [![Teacher 独木桥中等](videos/previews/teacher_beam_medium.webp)](videos/teacher_beam_medium.mp4) | [![Student 独木桥中等](videos/previews/student_beam_medium.webp)](videos/student_beam_medium.mp4) |
+| 困难 | [![Teacher 独木桥困难](videos/previews/teacher_beam_hard.webp)](videos/teacher_beam_hard.mp4) | [![Student 独木桥困难](videos/previews/student_beam_hard.webp)](videos/student_beam_hard.mp4) |
+
 ## 结果文件
 
 - `metrics.csv`：24 个有效评测条件的汇总数据
 - `full/*.json`：每个条件的完整机器可读指标与参数
 - `full/*.log`：每个条件的原始运行日志
 - `full/status.log`：后台批处理执行记录
+- `videos/*.mp4`：24 个实验条件的 Teacher 与 Student 演示视频
+- `videos/previews/*.webp`：可在报告页面直接播放的动画预览
+- `videos/status.log`：视频批处理执行记录
