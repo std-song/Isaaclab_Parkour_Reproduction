@@ -101,7 +101,7 @@ class UnitreeGo2TeacherParkourEnvCfg_PLAY(UnitreeGo2TeacherParkourEnvCfg_EVAL):
             self.scene.terrain.terrain_generator.difficulty_range = (0.7,1.0)
         self.events.push_by_setting_velocity = None
         for key, sub_terrain in self.scene.terrain.terrain_generator.sub_terrains.items():
-            if key =='parkour_flat':
+            if key in ['parkour_flat', 'parkour_beam']:
                 sub_terrain.proportion = 0.0
             else:
                 sub_terrain.proportion = 0.2

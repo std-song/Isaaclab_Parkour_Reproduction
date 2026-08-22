@@ -201,12 +201,14 @@ def parkour_step_terrain(
         goal_heights = np.ones((num_goals)) * platform_height
 
         num_stones = num_goals - 2
+        continuous_steps = max(1, min(int(cfg.continuous_steps), num_stones))
+        descending_steps = min(continuous_steps, num_stones - continuous_steps)
         for i in range(num_stones):
             rand_x = np.random.randint(dis_x_min, dis_x_max)
             rand_y = np.random.randint(dis_y_min, dis_y_max)
-            if i < num_stones // 2:
+            if i < continuous_steps:
                 stair_height += step_height
-            elif i > num_stones // 2:
+            elif i >= num_stones - descending_steps:
                 stair_height -= step_height
             height_field_raw[dis_x:dis_x+rand_x, ] = stair_height
             dis_x += rand_x
@@ -225,6 +227,47 @@ def parkour_step_terrain(
         if cfg.apply_roughness:
             height_field_raw = random_uniform_terrain(difficulty, cfg, height_field_raw)
         return height_field_raw, goals * cfg.horizontal_scale, goal_heights 
+
+
+@parkour_field_to_mesh
+def parkour_beam_terrain(
+    difficulty: float,
+    cfg: extreme_parkour_terrains_cfg.ExtremeParkourBeamTerrainCfg,
+    num_goals: int,
+    )->tuple[np.ndarray, np.ndarray, np.ndarray]:
+        """Generate a continuous narrow beam over a pit for width robustness tests."""
+        width_pixels = int(cfg.size[0] / cfg.horizontal_scale)
+        length_pixels = int(cfg.size[1] / cfg.horizontal_scale)
+        mid_y = length_pixels // 2
+
+        pit_depth = -round(cfg.pit_depth / cfg.vertical_scale)
+        platform_height = round(cfg.platform_height / cfg.vertical_scale)
+        beam_height = round(cfg.beam_height / cfg.vertical_scale)
+        height_field_raw = np.full((width_pixels, length_pixels), pit_depth, dtype=float)
+
+        platform_len = round(cfg.platform_len / cfg.horizontal_scale)
+        final_platform_len = round(2.0 / cfg.horizontal_scale)
+        beam_start = platform_len
+        beam_end = width_pixels - final_platform_len
+        beam_width_pixels = max(1, round(cfg.beam_width / cfg.horizontal_scale))
+        beam_y_min = mid_y - beam_width_pixels // 2
+        beam_y_max = beam_y_min + beam_width_pixels
+
+        height_field_raw[:beam_start, :] = platform_height
+        height_field_raw[beam_start:beam_end, beam_y_min:beam_y_max] = beam_height
+        height_field_raw[beam_end:, :] = platform_height
+
+        goals = np.zeros((num_goals, 2))
+        goals[:, 0] = np.linspace(platform_len - 1, width_pixels - final_platform_len / 2, num_goals)
+        goals[:, 1] = mid_y
+        goal_heights = np.ones(num_goals) * beam_height
+        goal_heights[0] = platform_height
+        goal_heights[-1] = platform_height
+
+        height_field_raw = padding_height_field_raw(height_field_raw, cfg)
+        if cfg.apply_roughness:
+            height_field_raw = random_uniform_terrain(difficulty, cfg, height_field_raw)
+        return height_field_raw, goals * cfg.horizontal_scale, goal_heights * cfg.vertical_scale
 
 @parkour_field_to_mesh
 def parkour_terrain(

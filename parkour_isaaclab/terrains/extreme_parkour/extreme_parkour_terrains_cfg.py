@@ -31,6 +31,14 @@ class ExtremeParkourHurdleTerrainCfg(ExtremeParkourRoughTerrainCfg):
 class ExtremeParkourStepTerrainCfg(ExtremeParkourRoughTerrainCfg):
     function = extreme_parkour_terrians.parkour_step_terrain
     step_height: str = '0.1 + 0.35*difficulty'
+    continuous_steps: int = 3
+
+@configclass
+class ExtremeParkourBeamTerrainCfg(ExtremeParkourRoughTerrainCfg):
+    function = extreme_parkour_terrians.parkour_beam_terrain
+    beam_width: float = 1.0
+    beam_height: float = 0.0
+    pit_depth: float = 1.0
 
 @configclass
 class ExtremeParkourTerrainCfg(ExtremeParkourRoughTerrainCfg):

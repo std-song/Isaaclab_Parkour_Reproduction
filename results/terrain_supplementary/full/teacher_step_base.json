@@ -1,0 +1,22 @@
+{
+  "task": "Isaac-Extreme-Parkour-Teacher-Unitree-Go2-Eval-v0",
+  "checkpoint": "/root/autodl-tmp/Isaaclab_Parkour/pretrained_official/2025-08-13_05-15-58/model_49999.pt",
+  "terrain_experiment": "step_base",
+  "terrain_parameters": {
+    "terrain": "parkour_step",
+    "step_height": "0.1 + 0.35*difficulty",
+    "continuous_steps": 3
+  },
+  "seed": 42,
+  "num_envs": 256,
+  "simulation_steps": 1500,
+  "mean_reward": 19.55892143286692,
+  "reward_std": 5.594351255011138,
+  "mean_episode_length": 910.6842105263158,
+  "episode_length_std": 330.88701468701794,
+  "mean_waypoint_progress": 0.9922027290448343,
+  "waypoint_progress_std": 0.06748269368719957,
+  "mean_edge_violation": 0.19866666666666666,
+  "edge_violation_std": 0.46675999066853285,
+  "completed_episodes": 513
+}

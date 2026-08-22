@@ -42,6 +42,13 @@ EXTREME_PARKOUR_TERRAINS_CFG = ParkourTerrainGeneratorCfg(
                         half_valid_width = (0.5, 1),
                         step_height = '0.1 + 0.35*difficulty'
                         ),
+        "parkour_beam": ExtremeParkourBeamTerrainCfg(
+                        proportion=0.0,
+                        apply_roughness=False,
+                        beam_width=1.0,
+                        beam_height=0.0,
+                        pit_depth=1.0,
+                        ),
         "parkour": ExtremeParkourTerrainCfg(
                         proportion=0.2,
                         apply_roughness=True,

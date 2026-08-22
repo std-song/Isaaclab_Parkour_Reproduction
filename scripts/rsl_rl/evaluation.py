@@ -27,6 +27,10 @@ parser.add_argument(
 )
 parser.add_argument("--num_envs", type=int, default=1, help="Number of environments to simulate.")
 parser.add_argument("--task", type=str, default=None, help="Name of the task.")
+parser.add_argument("--seed", type=int, default=42, help="Seed used for terrain generation and evaluation.")
+parser.add_argument("--terrain_experiment", type=str, default=None, help="Supplementary terrain experiment variant.")
+parser.add_argument("--metrics_json", type=str, default=None, help="Optional path for machine-readable metrics.")
+parser.add_argument("--evaluation_steps", type=int, default=1500, help="Number of simulation steps to evaluate.")
 parser.add_argument(
     "--use_pretrained_checkpoint",
     action="store_true",
@@ -49,7 +53,9 @@ simulation_app = app_launcher.app
 """Rest everything follows."""
 
 import gymnasium as gym
+import json
 import os
+import random
 import time
 import torch
 
@@ -62,6 +68,7 @@ from isaaclab.utils.pretrained_checkpoint import get_published_pretrained_checkp
 from parkour_tasks.extreme_parkour_task.config.go2.agents.parkour_rl_cfg import ParkourRslRlOnPolicyRunnerCfg
 
 from scripts.rsl_rl.vecenv_wrapper import ParkourRslRlVecEnvWrapper
+from scripts.rsl_rl.terrain_experiments import EXPERIMENTS, apply_terrain_experiment
 
 import isaaclab_tasks  # noqa: F401
 from isaaclab_tasks.utils import get_checkpoint_path, parse_env_cfg
@@ -80,6 +87,19 @@ def main():
     env_cfg = parse_env_cfg(
         args_cli.task, device=args_cli.device, num_envs=args_cli.num_envs, use_fabric=not args_cli.disable_fabric
     )
+    if args_cli.terrain_experiment is not None and args_cli.terrain_experiment not in EXPERIMENTS:
+        raise ValueError(
+            f"Unknown terrain experiment '{args_cli.terrain_experiment}'. "
+            f"Available variants: {', '.join(EXPERIMENTS)}"
+        )
+    random.seed(args_cli.seed)
+    np.random.seed(args_cli.seed)
+    torch.manual_seed(args_cli.seed)
+    env_cfg.seed = args_cli.seed
+    env_cfg.scene.terrain.terrain_generator.seed = args_cli.seed
+    experiment_cfg = None
+    if args_cli.terrain_experiment is not None:
+        experiment_cfg = apply_terrain_experiment(env_cfg, args_cli.terrain_experiment)
     agent_cfg: ParkourRslRlOnPolicyRunnerCfg = cli_args.parse_rsl_rl_cfg(args_cli.task, args_cli)
 
     # specify directory for logging experiments
@@ -144,7 +164,7 @@ def main():
     obs, extras = env.get_observations()
     timestep = 0
     # simulate environment
-    total_steps = 1000
+    total_steps = args_cli.evaluation_steps
     rewbuffer = deque(maxlen=total_steps)
     lenbuffer = deque(maxlen=total_steps)
     num_waypoints_buffer = deque(maxlen=total_steps)
@@ -156,7 +176,7 @@ def main():
     reward_feet_edge = env.unwrapped.reward_manager.get_term_cfg("reward_feet_edge").func
     base_parkour = env.unwrapped.parkour_manager.get_term("base_parkour")
     # while simulation_app.is_running():
-    for i in tqdm(range(1500)):
+    for i in tqdm(range(args_cli.evaluation_steps)):
         start_time = time.time()
         # run everything in inference mode
         if agent_cfg.algorithm.class_name != "DistillationWithExtractor":
@@ -219,6 +239,30 @@ def main():
     print("Mean episode length: {:.2f}$\pm${:.2f}".format(len_mean, len_std))
     print("Mean number of waypoints: {:.2f}$\pm${:.2f}".format(num_waypoints_mean, num_waypoints_std))
     print("Mean edge violation: {:.2f}$\pm${:.2f}".format(edge_violation_mean, edge_violation_std))
+    if args_cli.metrics_json is not None:
+        metrics = {
+            "task": args_cli.task,
+            "checkpoint": os.path.abspath(resume_path),
+            "terrain_experiment": args_cli.terrain_experiment,
+            "terrain_parameters": experiment_cfg,
+            "seed": args_cli.seed,
+            "num_envs": env.num_envs,
+            "simulation_steps": args_cli.evaluation_steps,
+            "mean_reward": rew_mean,
+            "reward_std": rew_std,
+            "mean_episode_length": len_mean,
+            "episode_length_std": len_std,
+            "mean_waypoint_progress": float(num_waypoints_mean),
+            "waypoint_progress_std": float(num_waypoints_std),
+            "mean_edge_violation": float(edge_violation_mean),
+            "edge_violation_std": float(edge_violation_std),
+            "completed_episodes": len(rewbuffer),
+        }
+        metrics_path = os.path.abspath(args_cli.metrics_json)
+        os.makedirs(os.path.dirname(metrics_path), exist_ok=True)
+        with open(metrics_path, "w", encoding="utf-8") as file:
+            json.dump(metrics, file, ensure_ascii=False, indent=2)
+        print(f"[INFO] Metrics written to: {metrics_path}")
 
 if __name__ == "__main__":
     # run the main function

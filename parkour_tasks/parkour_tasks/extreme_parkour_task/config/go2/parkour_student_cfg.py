@@ -22,7 +22,10 @@ class ParkourStudentSceneCfg(ParkourTeacherSceneCfg):
             sub_terrain: ExtremeParkourRoughTerrainCfg
             sub_terrain.use_simplified = True 
             sub_terrain.horizontal_scale = 0.1
-            if key == 'parkour_demo':
+            if key == 'parkour_beam':
+                sub_terrain.proportion = 0.0
+
+            elif key == 'parkour_demo':
                 sub_terrain.proportion = 0.15
 
             elif key =='parkour_flat':
@@ -98,7 +101,7 @@ class UnitreeGo2StudentParkourEnvCfg_EVAL(UnitreeGo2StudentParkourEnvCfg):
         self.events.random_camera_position.params['rot_noise_range'] = {'pitch':(0, 1)}
         
         for key, sub_terrain in self.scene.terrain.terrain_generator.sub_terrains.items():
-            if key in ['parkour_flat', 'parkour_demo']:
+            if key in ['parkour_flat', 'parkour_demo', 'parkour_beam']:
                 sub_terrain.proportion = 0.0
             else:
                 sub_terrain.proportion = 0.25
@@ -118,7 +121,7 @@ class UnitreeGo2StudentParkourEnvCfg_PLAY(UnitreeGo2StudentParkourEnvCfg_EVAL):
             self.scene.terrain.terrain_generator.difficulty_range = (0.7,1.0)
         self.events.push_by_setting_velocity = None
         for key, sub_terrain in self.scene.terrain.terrain_generator.sub_terrains.items():
-            if key =='parkour_flat':
+            if key in ['parkour_flat', 'parkour_beam']:
                 sub_terrain.proportion = 0.0
             else:
                 sub_terrain.proportion = 0.25

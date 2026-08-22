@@ -1,0 +1,558 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /root/autodl-tmp/IsaacLab/apps/isaaclab.python.headless.kit
+[Warning] [simulation_app.simulation_app] Modules: ['omni.kit_app'] were loaded before SimulationApp was started and might not be loaded correctly.
+[Warning] [simulation_app.simulation_app] Please check to make sure no extra omniverse or pxr modules are imported before the call to SimulationApp(...)
+Loading user config located at: '/root/autodl-tmp/conda/envs/parkour/lib/python3.10/site-packages/omni/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: /root/autodl-tmp/conda/envs/parkour/lib/python3.10/site-packages/omni/logs/Kit/Isaac-Sim/4.5/kit_20260822_173853.log
+2026-08-22 09:38:53 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-08-22 09:38:53 [6ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/root/autodl-tmp/IsaacLab/apps/rendering_modes' or '/root/autodl-tmp/IsaacLab/apps/rendering_modes/config'
+2026-08-22 09:38:53 [175ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-08-22 09:38:54 [353ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-08-22 09:38:54 [595ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2026-08-22 09:38:54 [626ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.142       | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090          | Yes: 0 |     | 24810   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2684      | fbfb581f.. |
+|     |                                  |        |     |            | 1b        |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-78-generic
+| Processor: Intel(R) Xeon(R) Platinum 8352V CPU @ 2.10GHz
+| Bare Metal Cores: 64 | Bare Metal Logical Cores: 128
+| Core Usage Quota: 16
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 122880 | Free Memory: 120136
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+[INFO]: Parsing configuration from: parkour_tasks.extreme_parkour_task.config.go2.parkour_teacher_cfg:UnitreeGo2TeacherParkourEnvCfg_EVAL
+[INFO]: Parsing configuration from: parkour_tasks.extreme_parkour_task.config.go2.agents.rsl_teacher_ppo_cfg:UnitreeGo2ParkourTeacherPPORunnerCfg
+[INFO] Loading experiment from directory: /root/autodl-tmp/Isaaclab_Parkour/logs/rsl_rl/unitree_go2_parkour
+Setting seed: 42
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 42
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO] Generating terrains based on curriculum took : 0.335189 seconds
+[INFO]: Time taken for scene creation : 5.748595 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 256
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 2.977588 seconds
+2026-08-22 09:39:08 [14,631ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPreviewSurface.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,631ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdUVTexture.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,632ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,632ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float2.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,632ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float3.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,632ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float4.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,632ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_int.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,633ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_string.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,633ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_normal.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,633ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_point.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,633ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_vector.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,634ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_matrix.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2026-08-22 09:39:08 [14,634ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /builds/omniverse/usd-ci/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdTransform2d.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++-----------------------------------------------+
+|              Active Command Terms             |
++-------+---------------+-----------------------+
+| Index | Name          |          Type         |
++-------+---------------+-----------------------+
+|   0   | base_velocity | UniformParkourCommand |
++-------+---------------+-----------------------+
+
+[INFO] Event Manager:  <EventManager> contains 3 active terms.
++---------------------------------------+
+|  Active Event Terms in Mode: 'reset'  |
++--------+------------------------------+
+| Index  | Name                         |
++--------+------------------------------+
+|   0    | reset_root_state             |
+|   1    | reset_robot_joints           |
+|   2    | base_external_force_torque   |
++--------+------------------------------+
++--------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++----------+---------------------------+
+|  Index   | Name                      |
++----------+---------------------------+
+|    0     | physics_material          |
++----------+---------------------------+
++------------------------------------------------------------+
+|           Active Event Terms in Mode: 'interval'           |
++-------+--------------------------+-------------------------+
+| Index | Name                     | Interval time range (s) |
++-------+--------------------------+-------------------------+
+|   0   | push_by_setting_velocity |        (6.0, 6.0)       |
++-------+--------------------------+-------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 1 active terms.
++------------------------------------+
+|  Active Action Terms (shape: 12)   |
++--------+-------------+-------------+
+| Index  | Name        |   Dimension |
++--------+-------------+-------------+
+|   0    | joint_pos   |          12 |
++--------+-------------+-------------+
+
+[INFO] Parkour Manager: <CommandManager> contains 1 active terms.
++-------------------------------------+
+|         Active Command Terms        |
++-------+--------------+--------------+
+| Index | Name         |     Type     |
++-------+--------------+--------------+
+|   0   | base_parkour | ParkourEvent |
++-------+--------------+--------------+
+
+2026-08-22 09:39:08 [14,831ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++--------------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (753,))  |
++---------+----------------------------------------+-----------+
+|  Index  | Name                                   |   Shape   |
++---------+----------------------------------------+-----------+
+|    0    | extreme_parkour_observations           |   (753,)  |
++---------+----------------------------------------+-----------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-------------------------------------+
+|       Active Termination Terms      |
++-------+------------------+----------+
+| Index | Name             | Time Out |
++-------+------------------+----------+
+|   0   | total_terminates |   True   |
++-------+------------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 14 active terms.
++---------------------------------------------+
+|             Active Reward Terms             |
++-------+--------------------------+----------+
+| Index | Name                     |   Weight |
++-------+--------------------------+----------+
+|   0   | reward_collision         |    -10.0 |
+|   1   | reward_feet_edge         |     -1.0 |
+|   2   | reward_torques           |   -1e-05 |
+|   3   | reward_dof_error         |    -0.04 |
+|   4   | reward_hip_pos           |     -0.5 |
+|   5   | reward_ang_vel_xy        |    -0.05 |
+|   6   | reward_action_rate       |     -0.1 |
+|   7   | reward_dof_acc           | -2.5e-07 |
+|   8   | reward_lin_vel_z         |     -1.0 |
+|   9   | reward_orientation       |     -1.0 |
+|   10  | reward_feet_stumble      |     -1.0 |
+|   11  | reward_tracking_goal_vel |      1.5 |
+|   12  | reward_tracking_yaw      |      0.5 |
+|   13  | reward_delta_torques     |   -1e-07 |
++-------+--------------------------+----------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+2026-08-22 09:39:08 [15,197ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+[INFO]: Loading model checkpoint from: /root/autodl-tmp/Isaaclab_Parkour/pretrained_official/2025-08-13_05-15-58/model_49999.pt
+Actor MLP: Actor(
+  (priv_encoder): Sequential(
+    (0): Linear(in_features=29, out_features=64, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=64, out_features=20, bias=True)
+    (3): ELU(alpha=1.0)
+  )
+  (history_encoder): StateHistoryEncoder(
+    (activation_fn): ELU(alpha=1.0)
+    (encoder): Sequential(
+      (0): Linear(in_features=53, out_features=30, bias=True)
+      (1): ELU(alpha=1.0)
+    )
+    (conv_layers): Sequential(
+      (0): Conv1d(30, 20, kernel_size=(4,), stride=(2,))
+      (1): ELU(alpha=1.0)
+      (2): Conv1d(20, 10, kernel_size=(2,), stride=(1,))
+      (3): ELU(alpha=1.0)
+      (4): Flatten(start_dim=1, end_dim=-1)
+    )
+    (linear_output): Sequential(
+      (0): Linear(in_features=30, out_features=20, bias=True)
+      (1): ELU(alpha=1.0)
+    )
+  )
+  (scan_encoder): Sequential(
+    (0): Linear(in_features=132, out_features=128, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=128, out_features=64, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=64, out_features=32, bias=True)
+    (5): Tanh()
+  )
+  (actor_backbone): Sequential(
+    (0): Linear(in_features=114, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=12, bias=True)
+  )
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=753, out_features=512, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=512, out_features=256, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=256, out_features=128, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)
+estimator MLP: DefaultEstimator(
+  (estimator): Sequential(
+    (0): Linear(in_features=53, out_features=128, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=128, out_features=64, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=64, out_features=9, bias=True)
+  )
+)
+<scripts.rsl_rl.modules.on_policy_runner_with_extractor.OnPolicyRunnerWithExtractor object at 0x7f277a120dc0>
+  0%|          | 0/1500 [00:00<?, ?it/s]  0%|          | 1/1500 [00:00<09:09,  2.73it/s]  0%|          | 2/1500 [00:00<06:37,  3.77it/s]2026-08-22 09:39:09 [16,011ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  0%|          | 6/1500 [00:00<02:00, 12.39it/s]2026-08-22 09:39:09 [16,138ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  1%|          | 10/1500 [00:00<01:17, 19.24it/s]  1%|          | 14/1500 [00:00<01:00, 24.57it/s]2026-08-22 09:39:09 [16,268ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  1%|          | 18/1500 [00:00<00:51, 28.76it/s]2026-08-22 09:39:10 [16,402ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  1%|▏         | 22/1500 [00:01<00:47, 31.01it/s]2026-08-22 09:39:10 [16,530ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  2%|▏         | 26/1500 [00:01<00:44, 33.25it/s]2026-08-22 09:39:10 [16,660ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  2%|▏         | 30/1500 [00:01<00:42, 34.68it/s]2026-08-22 09:39:10 [16,786ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  2%|▏         | 35/1500 [00:01<00:40, 36.32it/s]2026-08-22 09:39:10 [16,906ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  3%|▎         | 40/1500 [00:01<00:38, 37.98it/s]  3%|▎         | 44/1500 [00:01<00:38, 37.97it/s]2026-08-22 09:39:10 [17,038ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  3%|▎         | 48/1500 [00:01<00:38, 38.18it/s]2026-08-22 09:39:10 [17,165ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  3%|▎         | 52/1500 [00:01<00:37, 38.41it/s]2026-08-22 09:39:10 [17,292ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  4%|▍         | 57/1500 [00:01<00:36, 39.19it/s]2026-08-22 09:39:11 [17,413ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  4%|▍         | 62/1500 [00:02<00:36, 39.70it/s]2026-08-22 09:39:11 [17,535ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  4%|▍         | 67/1500 [00:02<00:36, 39.76it/s]2026-08-22 09:39:11 [17,661ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  5%|▍         | 72/1500 [00:02<00:35, 40.26it/s]2026-08-22 09:39:11 [17,782ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  5%|▌         | 77/1500 [00:02<00:35, 40.63it/s]2026-08-22 09:39:11 [17,912ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  5%|▌         | 82/1500 [00:02<00:35, 39.84it/s]2026-08-22 09:39:11 [18,041ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  6%|▌         | 86/1500 [00:02<00:35, 39.47it/s]2026-08-22 09:39:11 [18,164ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  6%|▌         | 91/1500 [00:02<00:35, 39.80it/s]2026-08-22 09:39:11 [18,288ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  6%|▋         | 96/1500 [00:02<00:35, 39.93it/s]2026-08-22 09:39:12 [18,410ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  7%|▋         | 101/1500 [00:03<00:34, 40.28it/s]2026-08-22 09:39:12 [18,532ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  7%|▋         | 106/1500 [00:03<00:34, 40.00it/s]2026-08-22 09:39:12 [18,662ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  7%|▋         | 111/1500 [00:03<00:35, 39.55it/s]2026-08-22 09:39:12 [18,798ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  8%|▊         | 115/1500 [00:03<00:35, 38.87it/s]2026-08-22 09:39:12 [18,921ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  8%|▊         | 120/1500 [00:03<00:34, 39.43it/s]2026-08-22 09:39:12 [19,042ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  8%|▊         | 125/1500 [00:03<00:34, 40.03it/s]  9%|▊         | 129/1500 [00:03<00:34, 39.69it/s]2026-08-22 09:39:12 [19,172ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  9%|▉         | 134/1500 [00:03<00:34, 40.00it/s]2026-08-22 09:39:12 [19,294ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  9%|▉         | 138/1500 [00:04<00:35, 38.33it/s]2026-08-22 09:39:13 [19,436ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+  9%|▉         | 142/1500 [00:04<00:35, 38.67it/s]2026-08-22 09:39:13 [19,564ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 10%|▉         | 146/1500 [00:04<00:35, 38.41it/s]2026-08-22 09:39:13 [19,697ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 10%|█         | 150/1500 [00:04<00:35, 38.24it/s] 10%|█         | 154/1500 [00:04<00:35, 38.09it/s]2026-08-22 09:39:13 [19,833ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 11%|█         | 158/1500 [00:04<00:35, 37.43it/s]2026-08-22 09:39:13 [19,966ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 11%|█         | 162/1500 [00:04<00:35, 37.53it/s]2026-08-22 09:39:13 [20,100ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 11%|█         | 166/1500 [00:04<00:35, 37.75it/s]2026-08-22 09:39:13 [20,229ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 11%|█▏        | 170/1500 [00:04<00:35, 37.92it/s] 12%|█▏        | 174/1500 [00:04<00:36, 36.43it/s]2026-08-22 09:39:14 [20,377ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 12%|█▏        | 178/1500 [00:05<00:36, 36.63it/s]2026-08-22 09:39:14 [20,513ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 12%|█▏        | 182/1500 [00:05<00:35, 36.70it/s]2026-08-22 09:39:14 [20,653ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 12%|█▏        | 186/1500 [00:05<00:36, 36.18it/s]2026-08-22 09:39:14 [20,798ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 13%|█▎        | 190/1500 [00:05<00:36, 35.41it/s] 13%|█▎        | 194/1500 [00:05<00:37, 34.76it/s]2026-08-22 09:39:14 [20,949ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 13%|█▎        | 198/1500 [00:05<00:38, 34.05it/s]2026-08-22 09:39:14 [21,099ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 13%|█▎        | 202/1500 [00:05<00:37, 34.35it/s]2026-08-22 09:39:14 [21,242ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 14%|█▎        | 206/1500 [00:05<00:37, 34.70it/s]2026-08-22 09:39:15 [21,386ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 14%|█▍        | 210/1500 [00:06<00:37, 34.31it/s] 14%|█▍        | 214/1500 [00:06<00:37, 34.04it/s]2026-08-22 09:39:15 [21,538ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 15%|█▍        | 218/1500 [00:06<00:38, 33.53it/s]2026-08-22 09:39:15 [21,702ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 15%|█▍        | 222/1500 [00:06<00:40, 31.65it/s]2026-08-22 09:39:15 [21,868ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 15%|█▌        | 226/1500 [00:06<00:40, 31.42it/s]2026-08-22 09:39:15 [22,030ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 15%|█▌        | 230/1500 [00:06<00:40, 31.47it/s] 16%|█▌        | 234/1500 [00:06<00:40, 31.30it/s]2026-08-22 09:39:15 [22,191ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 16%|█▌        | 238/1500 [00:06<00:39, 31.80it/s]2026-08-22 09:39:15 [22,342ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 16%|█▌        | 242/1500 [00:07<00:39, 31.82it/s]2026-08-22 09:39:16 [22,501ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 16%|█▋        | 246/1500 [00:07<00:39, 31.91it/s]2026-08-22 09:39:16 [22,659ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 17%|█▋        | 250/1500 [00:07<00:39, 31.62it/s] 17%|█▋        | 254/1500 [00:07<00:39, 31.51it/s]2026-08-22 09:39:16 [22,819ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 17%|█▋        | 258/1500 [00:07<00:38, 32.00it/s]2026-08-22 09:39:16 [22,975ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 17%|█▋        | 262/1500 [00:07<00:39, 31.68it/s]2026-08-22 09:39:16 [23,129ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 18%|█▊        | 266/1500 [00:07<00:38, 32.07it/s]2026-08-22 09:39:16 [23,277ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 18%|█▊        | 270/1500 [00:07<00:37, 32.56it/s] 18%|█▊        | 274/1500 [00:08<00:36, 33.18it/s]2026-08-22 09:39:17 [23,436ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 19%|█▊        | 278/1500 [00:08<00:38, 32.10it/s]2026-08-22 09:39:17 [23,593ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 19%|█▉        | 282/1500 [00:08<00:38, 31.89it/s]2026-08-22 09:39:17 [23,751ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 19%|█▉        | 286/1500 [00:08<00:38, 31.69it/s]2026-08-22 09:39:17 [23,912ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 19%|█▉        | 290/1500 [00:08<00:38, 31.33it/s] 20%|█▉        | 294/1500 [00:08<00:39, 30.70it/s]2026-08-22 09:39:17 [24,082ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 20%|█▉        | 298/1500 [00:08<00:39, 30.57it/s]2026-08-22 09:39:17 [24,260ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 20%|██        | 302/1500 [00:08<00:40, 29.42it/s]2026-08-22 09:39:18 [24,424ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 20%|██        | 306/1500 [00:09<00:40, 29.78it/s]2026-08-22 09:39:18 [24,590ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 21%|██        | 310/1500 [00:09<00:39, 30.03it/s] 21%|██        | 314/1500 [00:09<00:39, 29.93it/s]2026-08-22 09:39:18 [24,758ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 21%|██        | 317/1500 [00:09<00:40, 29.56it/s]2026-08-22 09:39:18 [24,926ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 21%|██▏       | 321/1500 [00:09<00:39, 29.83it/s]2026-08-22 09:39:18 [25,102ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 22%|██▏       | 325/1500 [00:09<00:40, 29.34it/s] 22%|██▏       | 329/1500 [00:09<00:38, 30.07it/s]2026-08-22 09:39:18 [25,267ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 22%|██▏       | 333/1500 [00:09<00:38, 30.05it/s]2026-08-22 09:39:19 [25,431ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 22%|██▏       | 337/1500 [00:10<00:38, 30.09it/s]2026-08-22 09:39:19 [25,595ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 23%|██▎       | 341/1500 [00:10<00:38, 30.14it/s]2026-08-22 09:39:19 [25,769ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 23%|██▎       | 345/1500 [00:10<00:39, 29.49it/s] 23%|██▎       | 348/1500 [00:10<00:39, 29.41it/s]2026-08-22 09:39:19 [25,939ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 23%|██▎       | 352/1500 [00:10<00:38, 29.82it/s]2026-08-22 09:39:19 [26,107ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 24%|██▎       | 355/1500 [00:10<00:38, 29.45it/s] 24%|██▍       | 358/1500 [00:10<00:38, 29.46it/s]2026-08-22 09:39:19 [26,274ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 24%|██▍       | 361/1500 [00:10<00:39, 29.07it/s]2026-08-22 09:39:20 [26,452ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 24%|██▍       | 365/1500 [00:11<00:38, 29.14it/s] 25%|██▍       | 369/1500 [00:11<00:38, 29.23it/s]2026-08-22 09:39:20 [26,627ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 25%|██▍       | 372/1500 [00:11<00:38, 29.31it/s]2026-08-22 09:39:20 [26,794ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 25%|██▌       | 375/1500 [00:11<00:38, 29.15it/s] 25%|██▌       | 378/1500 [00:11<00:38, 28.90it/s]2026-08-22 09:39:20 [26,970ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 25%|██▌       | 382/1500 [00:11<00:37, 29.43it/s]2026-08-22 09:39:20 [27,136ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 26%|██▌       | 385/1500 [00:11<00:38, 29.24it/s] 26%|██▌       | 389/1500 [00:11<00:37, 29.65it/s]2026-08-22 09:39:20 [27,300ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 26%|██▌       | 393/1500 [00:12<00:36, 30.23it/s]2026-08-22 09:39:21 [27,459ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 26%|██▋       | 397/1500 [00:12<00:36, 30.56it/s]2026-08-22 09:39:21 [27,619ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 27%|██▋       | 401/1500 [00:12<00:35, 30.68it/s]2026-08-22 09:39:21 [27,783ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 27%|██▋       | 405/1500 [00:12<00:35, 30.60it/s] 27%|██▋       | 409/1500 [00:12<00:35, 30.86it/s]2026-08-22 09:39:21 [27,944ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 28%|██▊       | 413/1500 [00:12<00:35, 30.94it/s]2026-08-22 09:39:21 [28,109ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 28%|██▊       | 417/1500 [00:12<00:35, 30.70it/s]2026-08-22 09:39:21 [28,266ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 28%|██▊       | 421/1500 [00:12<00:34, 31.04it/s]2026-08-22 09:39:22 [28,423ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 28%|██▊       | 425/1500 [00:13<00:34, 31.25it/s] 29%|██▊       | 429/1500 [00:13<00:34, 31.44it/s]2026-08-22 09:39:22 [28,588ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 29%|██▉       | 433/1500 [00:13<00:34, 30.81it/s]2026-08-22 09:39:22 [28,749ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 29%|██▉       | 437/1500 [00:13<00:34, 31.03it/s]2026-08-22 09:39:22 [28,914ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 29%|██▉       | 441/1500 [00:13<00:34, 30.46it/s]2026-08-22 09:39:22 [29,085ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 30%|██▉       | 445/1500 [00:13<00:35, 30.05it/s] 30%|██▉       | 449/1500 [00:13<00:34, 30.33it/s]2026-08-22 09:39:22 [29,253ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 30%|███       | 453/1500 [00:13<00:34, 30.18it/s]2026-08-22 09:39:23 [29,412ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 30%|███       | 457/1500 [00:14<00:34, 30.53it/s]2026-08-22 09:39:23 [29,572ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 31%|███       | 461/1500 [00:14<00:33, 30.74it/s]2026-08-22 09:39:23 [29,733ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 31%|███       | 465/1500 [00:14<00:33, 30.79it/s] 31%|███▏      | 469/1500 [00:14<00:33, 31.23it/s]2026-08-22 09:39:23 [29,890ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 32%|███▏      | 473/1500 [00:14<00:32, 31.35it/s]2026-08-22 09:39:23 [30,047ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 32%|███▏      | 477/1500 [00:14<00:32, 31.51it/s]2026-08-22 09:39:23 [30,204ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 32%|███▏      | 481/1500 [00:14<00:32, 31.56it/s]2026-08-22 09:39:24 [30,361ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 32%|███▏      | 485/1500 [00:14<00:32, 31.67it/s] 33%|███▎      | 489/1500 [00:15<00:31, 31.67it/s]2026-08-22 09:39:24 [30,519ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 33%|███▎      | 493/1500 [00:15<00:31, 31.66it/s]2026-08-22 09:39:24 [30,678ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 33%|███▎      | 497/1500 [00:15<00:31, 31.61it/s]2026-08-22 09:39:24 [30,835ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 33%|███▎      | 501/1500 [00:15<00:31, 31.70it/s]2026-08-22 09:39:24 [30,991ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 34%|███▎      | 505/1500 [00:15<00:31, 31.79it/s] 34%|███▍      | 509/1500 [00:15<00:31, 31.36it/s]2026-08-22 09:39:24 [31,155ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 34%|███▍      | 513/1500 [00:15<00:31, 31.54it/s]2026-08-22 09:39:24 [31,319ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 34%|███▍      | 517/1500 [00:16<00:31, 31.00it/s]2026-08-22 09:39:25 [31,479ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 35%|███▍      | 521/1500 [00:16<00:31, 31.00it/s]2026-08-22 09:39:25 [31,636ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 35%|███▌      | 525/1500 [00:16<00:31, 31.30it/s] 35%|███▌      | 529/1500 [00:16<00:31, 31.01it/s]2026-08-22 09:39:25 [31,800ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 36%|███▌      | 533/1500 [00:16<00:30, 31.21it/s]2026-08-22 09:39:25 [31,958ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 36%|███▌      | 537/1500 [00:16<00:30, 31.17it/s]2026-08-22 09:39:25 [32,123ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 36%|███▌      | 541/1500 [00:16<00:31, 30.71it/s]2026-08-22 09:39:25 [32,289ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 36%|███▋      | 545/1500 [00:16<00:31, 30.55it/s] 37%|███▋      | 549/1500 [00:17<00:30, 30.99it/s]2026-08-22 09:39:26 [32,447ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 37%|███▋      | 553/1500 [00:17<00:30, 31.30it/s]2026-08-22 09:39:26 [32,602ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 37%|███▋      | 557/1500 [00:17<00:29, 31.56it/s]2026-08-22 09:39:26 [32,764ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 37%|███▋      | 561/1500 [00:17<00:30, 31.23it/s]2026-08-22 09:39:26 [32,921ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 38%|███▊      | 565/1500 [00:17<00:29, 31.31it/s] 38%|███▊      | 569/1500 [00:17<00:29, 31.50it/s]2026-08-22 09:39:26 [33,080ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 38%|███▊      | 573/1500 [00:17<00:29, 31.06it/s]2026-08-22 09:39:26 [33,244ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 38%|███▊      | 577/1500 [00:17<00:30, 30.71it/s]2026-08-22 09:39:27 [33,410ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 39%|███▊      | 581/1500 [00:18<00:29, 30.87it/s]2026-08-22 09:39:27 [33,571ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 39%|███▉      | 585/1500 [00:18<00:29, 30.88it/s] 39%|███▉      | 589/1500 [00:18<00:29, 30.96it/s]2026-08-22 09:39:27 [33,738ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 40%|███▉      | 593/1500 [00:18<00:29, 30.71it/s]2026-08-22 09:39:27 [33,896ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 40%|███▉      | 597/1500 [00:18<00:29, 31.03it/s]2026-08-22 09:39:27 [34,053ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 40%|████      | 601/1500 [00:18<00:28, 31.16it/s]2026-08-22 09:39:27 [34,211ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 40%|████      | 605/1500 [00:18<00:28, 31.31it/s] 41%|████      | 609/1500 [00:18<00:28, 31.22it/s]2026-08-22 09:39:28 [34,373ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 41%|████      | 613/1500 [00:19<00:28, 31.08it/s]2026-08-22 09:39:28 [34,533ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 41%|████      | 617/1500 [00:19<00:28, 31.40it/s]2026-08-22 09:39:28 [34,687ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 41%|████▏     | 621/1500 [00:19<00:27, 31.71it/s]2026-08-22 09:39:28 [34,844ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 42%|████▏     | 625/1500 [00:19<00:27, 31.67it/s] 42%|████▏     | 629/1500 [00:19<00:27, 31.93it/s]2026-08-22 09:39:28 [35,007ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 42%|████▏     | 633/1500 [00:19<00:27, 31.33it/s]2026-08-22 09:39:28 [35,163ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 42%|████▏     | 637/1500 [00:19<00:27, 31.64it/s]2026-08-22 09:39:28 [35,323ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 43%|████▎     | 641/1500 [00:19<00:27, 31.32it/s]2026-08-22 09:39:29 [35,479ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 43%|████▎     | 645/1500 [00:20<00:27, 31.60it/s] 43%|████▎     | 649/1500 [00:20<00:27, 31.41it/s]2026-08-22 09:39:29 [35,640ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 44%|████▎     | 653/1500 [00:20<00:26, 31.55it/s]2026-08-22 09:39:29 [35,795ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 44%|████▍     | 657/1500 [00:20<00:26, 31.85it/s]2026-08-22 09:39:29 [35,957ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 44%|████▍     | 661/1500 [00:20<00:26, 31.38it/s]2026-08-22 09:39:29 [36,126ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 44%|████▍     | 665/1500 [00:20<00:27, 30.63it/s] 45%|████▍     | 669/1500 [00:20<00:26, 30.87it/s]2026-08-22 09:39:29 [36,293ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 45%|████▍     | 673/1500 [00:21<00:27, 30.06it/s]2026-08-22 09:39:30 [36,470ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 45%|████▌     | 677/1500 [00:21<00:27, 29.65it/s]2026-08-22 09:39:30 [36,631ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 45%|████▌     | 681/1500 [00:21<00:27, 30.01it/s]2026-08-22 09:39:30 [36,799ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 46%|████▌     | 685/1500 [00:21<00:27, 29.82it/s] 46%|████▌     | 688/1500 [00:21<00:27, 29.76it/s]2026-08-22 09:39:30 [36,972ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 46%|████▌     | 691/1500 [00:21<00:27, 29.57it/s]2026-08-22 09:39:30 [37,133ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 46%|████▋     | 695/1500 [00:21<00:26, 29.98it/s] 47%|████▋     | 698/1500 [00:21<00:26, 29.97it/s]2026-08-22 09:39:30 [37,309ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 47%|████▋     | 701/1500 [00:21<00:27, 29.39it/s]2026-08-22 09:39:31 [37,479ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 47%|████▋     | 705/1500 [00:22<00:27, 29.16it/s] 47%|████▋     | 709/1500 [00:22<00:26, 30.02it/s]2026-08-22 09:39:31 [37,644ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 48%|████▊     | 713/1500 [00:22<00:26, 30.15it/s]2026-08-22 09:39:31 [37,800ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 48%|████▊     | 717/1500 [00:22<00:25, 30.70it/s]2026-08-22 09:39:31 [37,963ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 48%|████▊     | 721/1500 [00:22<00:25, 30.17it/s]2026-08-22 09:39:31 [38,140ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 48%|████▊     | 725/1500 [00:22<00:26, 29.65it/s] 49%|████▊     | 728/1500 [00:22<00:26, 28.92it/s]2026-08-22 09:39:31 [38,331ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 49%|████▊     | 731/1500 [00:22<00:27, 28.03it/s]2026-08-22 09:39:32 [38,493ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 49%|████▉     | 735/1500 [00:23<00:26, 29.22it/s] 49%|████▉     | 739/1500 [00:23<00:25, 29.53it/s]2026-08-22 09:39:32 [38,663ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 50%|████▉     | 743/1500 [00:23<00:25, 30.07it/s]2026-08-22 09:39:32 [38,825ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 50%|████▉     | 747/1500 [00:23<00:25, 29.83it/s]2026-08-22 09:39:32 [38,979ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 50%|█████     | 751/1500 [00:23<00:24, 30.72it/s]2026-08-22 09:39:32 [39,131ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 50%|█████     | 755/1500 [00:23<00:23, 31.47it/s] 51%|█████     | 759/1500 [00:23<00:24, 30.79it/s]2026-08-22 09:39:32 [39,300ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 51%|█████     | 763/1500 [00:24<00:24, 29.69it/s]2026-08-22 09:39:33 [39,483ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 51%|█████     | 766/1500 [00:24<00:25, 29.30it/s] 51%|█████▏    | 769/1500 [00:24<00:25, 28.94it/s]2026-08-22 09:39:33 [39,664ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 51%|█████▏    | 772/1500 [00:24<00:25, 28.94it/s]2026-08-22 09:39:33 [39,838ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 52%|█████▏    | 775/1500 [00:24<00:25, 28.68it/s] 52%|█████▏    | 778/1500 [00:24<00:25, 28.37it/s]2026-08-22 09:39:33 [40,014ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 52%|█████▏    | 781/1500 [00:24<00:25, 27.81it/s]2026-08-22 09:39:33 [40,198ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 52%|█████▏    | 785/1500 [00:24<00:25, 28.14it/s] 53%|█████▎    | 789/1500 [00:24<00:23, 29.78it/s]2026-08-22 09:39:34 [40,354ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 53%|█████▎    | 792/1500 [00:25<00:23, 29.64it/s]2026-08-22 09:39:34 [40,510ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 53%|█████▎    | 796/1500 [00:25<00:22, 30.87it/s]2026-08-22 09:39:34 [40,665ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 53%|█████▎    | 800/1500 [00:25<00:22, 31.10it/s] 54%|█████▎    | 804/1500 [00:25<00:22, 30.46it/s]2026-08-22 09:39:34 [40,834ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 54%|█████▍    | 808/1500 [00:25<00:22, 30.71it/s]2026-08-22 09:39:34 [40,997ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 54%|█████▍    | 812/1500 [00:25<00:22, 30.14it/s]2026-08-22 09:39:34 [41,172ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 54%|█████▍    | 816/1500 [00:25<00:23, 29.73it/s]2026-08-22 09:39:34 [41,343ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 55%|█████▍    | 820/1500 [00:25<00:22, 29.59it/s] 55%|█████▍    | 824/1500 [00:26<00:22, 30.50it/s]2026-08-22 09:39:35 [41,497ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 55%|█████▌    | 828/1500 [00:26<00:22, 30.02it/s]2026-08-22 09:39:35 [41,677ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 55%|█████▌    | 832/1500 [00:26<00:22, 29.85it/s]2026-08-22 09:39:35 [41,838ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 56%|█████▌    | 836/1500 [00:26<00:22, 29.61it/s]2026-08-22 09:39:35 [42,009ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 56%|█████▌    | 840/1500 [00:26<00:22, 29.87it/s] 56%|█████▋    | 844/1500 [00:26<00:22, 29.64it/s]2026-08-22 09:39:35 [42,184ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 56%|█████▋    | 847/1500 [00:26<00:22, 29.20it/s]2026-08-22 09:39:36 [42,364ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 57%|█████▋    | 850/1500 [00:26<00:22, 28.60it/s] 57%|█████▋    | 853/1500 [00:27<00:22, 28.65it/s]2026-08-22 09:39:36 [42,530ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 57%|█████▋    | 857/1500 [00:27<00:22, 28.99it/s]2026-08-22 09:39:36 [42,697ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 57%|█████▋    | 861/1500 [00:27<00:21, 29.60it/s]2026-08-22 09:39:36 [42,854ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 58%|█████▊    | 865/1500 [00:27<00:20, 30.62it/s] 58%|█████▊    | 869/1500 [00:27<00:20, 30.66it/s]2026-08-22 09:39:36 [43,021ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 58%|█████▊    | 873/1500 [00:27<00:21, 29.57it/s]2026-08-22 09:39:36 [43,199ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 58%|█████▊    | 877/1500 [00:27<00:21, 29.54it/s]2026-08-22 09:39:37 [43,359ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 59%|█████▊    | 881/1500 [00:28<00:20, 30.27it/s]2026-08-22 09:39:37 [43,542ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 59%|█████▉    | 885/1500 [00:28<00:21, 28.95it/s] 59%|█████▉    | 889/1500 [00:28<00:20, 29.66it/s]2026-08-22 09:39:37 [43,701ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 60%|█████▉    | 893/1500 [00:28<00:20, 29.86it/s]2026-08-22 09:39:37 [43,864ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 60%|█████▉    | 897/1500 [00:28<00:19, 30.32it/s]2026-08-22 09:39:37 [44,026ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 60%|██████    | 901/1500 [00:28<00:19, 30.09it/s]2026-08-22 09:39:37 [44,201ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 60%|██████    | 905/1500 [00:28<00:19, 29.76it/s] 61%|██████    | 909/1500 [00:28<00:19, 30.38it/s]2026-08-22 09:39:38 [44,359ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 61%|██████    | 913/1500 [00:29<00:19, 30.51it/s]2026-08-22 09:39:38 [44,527ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 61%|██████    | 917/1500 [00:29<00:19, 30.16it/s]2026-08-22 09:39:38 [44,693ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 61%|██████▏   | 921/1500 [00:29<00:19, 29.87it/s] 62%|██████▏   | 924/1500 [00:29<00:19, 29.55it/s]2026-08-22 09:39:38 [44,866ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 62%|██████▏   | 928/1500 [00:29<00:18, 30.25it/s]2026-08-22 09:39:38 [45,035ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 62%|██████▏   | 932/1500 [00:29<00:19, 29.42it/s]2026-08-22 09:39:38 [45,200ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 62%|██████▏   | 936/1500 [00:29<00:18, 30.13it/s]2026-08-22 09:39:39 [45,364ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 63%|██████▎   | 940/1500 [00:29<00:18, 30.06it/s] 63%|██████▎   | 944/1500 [00:30<00:18, 30.25it/s]2026-08-22 09:39:39 [45,525ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 63%|██████▎   | 948/1500 [00:30<00:17, 30.91it/s]2026-08-22 09:39:39 [45,685ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 63%|██████▎   | 952/1500 [00:30<00:17, 30.54it/s]2026-08-22 09:39:39 [45,848ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 64%|██████▎   | 956/1500 [00:30<00:17, 30.88it/s]2026-08-22 09:39:39 [46,011ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 64%|██████▍   | 960/1500 [00:30<00:17, 30.64it/s] 64%|██████▍   | 964/1500 [00:30<00:17, 30.57it/s]2026-08-22 09:39:39 [46,173ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 65%|██████▍   | 968/1500 [00:30<00:17, 30.95it/s]2026-08-22 09:39:39 [46,335ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 65%|██████▍   | 972/1500 [00:31<00:16, 31.22it/s]2026-08-22 09:39:40 [46,483ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 65%|██████▌   | 976/1500 [00:31<00:16, 31.90it/s]2026-08-22 09:39:40 [46,645ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 65%|██████▌   | 980/1500 [00:31<00:16, 31.34it/s] 66%|██████▌   | 984/1500 [00:31<00:16, 31.02it/s]2026-08-22 09:39:40 [46,808ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 66%|██████▌   | 988/1500 [00:31<00:16, 30.83it/s]2026-08-22 09:39:40 [46,970ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 66%|██████▌   | 992/1500 [00:31<00:16, 31.03it/s]2026-08-22 09:39:40 [47,141ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 66%|██████▋   | 996/1500 [00:31<00:16, 30.60it/s]2026-08-22 09:39:40 [47,302ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 67%|██████▋   | 1000/1500 [00:31<00:16, 30.51it/s] 67%|██████▋   | 1004/1500 [00:32<00:15, 31.75it/s]2026-08-22 09:39:41 [47,447ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 67%|██████▋   | 1008/1500 [00:32<00:15, 32.70it/s]2026-08-22 09:39:41 [47,588ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 67%|██████▋   | 1012/1500 [00:32<00:14, 33.08it/s]2026-08-22 09:39:41 [47,737ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 68%|██████▊   | 1016/1500 [00:32<00:14, 33.32it/s]2026-08-22 09:39:41 [47,885ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 68%|██████▊   | 1020/1500 [00:32<00:14, 33.44it/s] 68%|██████▊   | 1024/1500 [00:32<00:14, 33.59it/s]2026-08-22 09:39:41 [48,033ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 69%|██████▊   | 1028/1500 [00:32<00:14, 33.48it/s]2026-08-22 09:39:41 [48,186ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 69%|██████▉   | 1032/1500 [00:32<00:14, 33.14it/s]2026-08-22 09:39:41 [48,340ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 69%|██████▉   | 1036/1500 [00:32<00:14, 32.97it/s]2026-08-22 09:39:42 [48,499ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 69%|██████▉   | 1040/1500 [00:33<00:14, 32.31it/s] 70%|██████▉   | 1044/1500 [00:33<00:14, 32.57it/s]2026-08-22 09:39:42 [48,651ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 70%|██████▉   | 1048/1500 [00:33<00:13, 32.48it/s]2026-08-22 09:39:42 [48,811ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 70%|███████   | 1052/1500 [00:33<00:13, 32.11it/s]2026-08-22 09:39:42 [48,963ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 70%|███████   | 1056/1500 [00:33<00:13, 31.94it/s]2026-08-22 09:39:42 [49,126ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 71%|███████   | 1060/1500 [00:33<00:13, 31.69it/s] 71%|███████   | 1064/1500 [00:33<00:13, 32.03it/s]2026-08-22 09:39:42 [49,280ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 71%|███████   | 1068/1500 [00:34<00:13, 32.18it/s]2026-08-22 09:39:43 [49,435ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 71%|███████▏  | 1072/1500 [00:34<00:13, 31.79it/s]2026-08-22 09:39:43 [49,595ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 72%|███████▏  | 1076/1500 [00:34<00:13, 31.86it/s]2026-08-22 09:39:43 [49,751ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 72%|███████▏  | 1080/1500 [00:34<00:13, 31.91it/s] 72%|███████▏  | 1084/1500 [00:34<00:12, 32.27it/s]2026-08-22 09:39:43 [49,902ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 73%|███████▎  | 1088/1500 [00:34<00:12, 32.13it/s]2026-08-22 09:39:43 [50,060ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 73%|███████▎  | 1092/1500 [00:34<00:12, 32.18it/s]2026-08-22 09:39:43 [50,216ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 73%|███████▎  | 1096/1500 [00:34<00:12, 31.98it/s]2026-08-22 09:39:44 [50,376ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 73%|███████▎  | 1100/1500 [00:35<00:12, 31.77it/s] 74%|███████▎  | 1104/1500 [00:35<00:12, 31.86it/s]2026-08-22 09:39:44 [50,533ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 74%|███████▍  | 1108/1500 [00:35<00:12, 31.45it/s]2026-08-22 09:39:44 [50,700ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 74%|███████▍  | 1112/1500 [00:35<00:12, 31.22it/s]2026-08-22 09:39:44 [50,855ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 74%|███████▍  | 1116/1500 [00:35<00:12, 31.56it/s]2026-08-22 09:39:44 [51,011ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 75%|███████▍  | 1120/1500 [00:35<00:12, 31.63it/s] 75%|███████▍  | 1124/1500 [00:35<00:11, 31.98it/s]2026-08-22 09:39:44 [51,165ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 75%|███████▌  | 1128/1500 [00:35<00:11, 31.94it/s]2026-08-22 09:39:44 [51,321ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 75%|███████▌  | 1132/1500 [00:36<00:11, 31.95it/s]2026-08-22 09:39:45 [51,489ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 76%|███████▌  | 1136/1500 [00:36<00:11, 31.11it/s]2026-08-22 09:39:45 [51,653ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 76%|███████▌  | 1140/1500 [00:36<00:11, 30.77it/s] 76%|███████▋  | 1144/1500 [00:36<00:11, 31.14it/s]2026-08-22 09:39:45 [51,811ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 77%|███████▋  | 1148/1500 [00:36<00:11, 30.90it/s]2026-08-22 09:39:45 [51,974ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 77%|███████▋  | 1152/1500 [00:36<00:11, 31.28it/s]2026-08-22 09:39:45 [52,138ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 77%|███████▋  | 1156/1500 [00:36<00:11, 30.68it/s]2026-08-22 09:39:45 [52,304ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 77%|███████▋  | 1160/1500 [00:36<00:11, 30.39it/s] 78%|███████▊  | 1164/1500 [00:37<00:11, 30.38it/s]2026-08-22 09:39:46 [52,471ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 78%|███████▊  | 1168/1500 [00:37<00:10, 30.54it/s]2026-08-22 09:39:46 [52,631ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 78%|███████▊  | 1172/1500 [00:37<00:10, 30.36it/s]2026-08-22 09:39:46 [52,797ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 78%|███████▊  | 1176/1500 [00:37<00:10, 30.51it/s]2026-08-22 09:39:46 [52,959ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 79%|███████▊  | 1180/1500 [00:37<00:10, 30.58it/s] 79%|███████▉  | 1184/1500 [00:37<00:10, 30.83it/s]2026-08-22 09:39:46 [53,125ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 79%|███████▉  | 1188/1500 [00:37<00:10, 30.52it/s]2026-08-22 09:39:46 [53,287ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 79%|███████▉  | 1192/1500 [00:37<00:10, 30.67it/s]2026-08-22 09:39:47 [53,448ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 80%|███████▉  | 1196/1500 [00:38<00:09, 30.74it/s]2026-08-22 09:39:47 [53,609ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 80%|████████  | 1200/1500 [00:38<00:09, 30.75it/s] 80%|████████  | 1204/1500 [00:38<00:09, 30.75it/s]2026-08-22 09:39:47 [53,774ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 81%|████████  | 1208/1500 [00:38<00:09, 30.45it/s]2026-08-22 09:39:47 [53,947ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 81%|████████  | 1212/1500 [00:38<00:09, 29.54it/s]2026-08-22 09:39:47 [54,121ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 81%|████████  | 1215/1500 [00:38<00:09, 29.47it/s] 81%|████████▏ | 1219/1500 [00:38<00:09, 29.52it/s]2026-08-22 09:39:47 [54,289ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 82%|████████▏ | 1223/1500 [00:39<00:09, 29.87it/s]2026-08-22 09:39:48 [54,454ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 82%|████████▏ | 1226/1500 [00:39<00:09, 29.84it/s] 82%|████████▏ | 1229/1500 [00:39<00:09, 29.80it/s]2026-08-22 09:39:48 [54,622ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 82%|████████▏ | 1232/1500 [00:39<00:09, 29.29it/s]2026-08-22 09:39:48 [54,792ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 82%|████████▏ | 1236/1500 [00:39<00:08, 29.88it/s] 83%|████████▎ | 1239/1500 [00:39<00:08, 29.88it/s]2026-08-22 09:39:48 [54,962ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 83%|████████▎ | 1242/1500 [00:39<00:08, 29.86it/s]2026-08-22 09:39:48 [55,121ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 83%|████████▎ | 1246/1500 [00:39<00:08, 30.32it/s]2026-08-22 09:39:48 [55,286ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 83%|████████▎ | 1250/1500 [00:39<00:08, 30.16it/s] 84%|████████▎ | 1254/1500 [00:40<00:08, 29.90it/s]2026-08-22 09:39:49 [55,455ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 84%|████████▍ | 1258/1500 [00:40<00:07, 30.42it/s]2026-08-22 09:39:49 [55,621ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 84%|████████▍ | 1262/1500 [00:40<00:07, 30.30it/s]2026-08-22 09:39:49 [55,787ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 84%|████████▍ | 1266/1500 [00:40<00:07, 30.00it/s]2026-08-22 09:39:49 [55,944ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 85%|████████▍ | 1270/1500 [00:40<00:07, 30.39it/s] 85%|████████▍ | 1274/1500 [00:40<00:07, 30.48it/s]2026-08-22 09:39:49 [56,110ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 85%|████████▌ | 1278/1500 [00:40<00:07, 30.36it/s]2026-08-22 09:39:49 [56,279ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 85%|████████▌ | 1282/1500 [00:40<00:07, 29.40it/s]2026-08-22 09:39:50 [56,452ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 86%|████████▌ | 1286/1500 [00:41<00:07, 30.03it/s]2026-08-22 09:39:50 [56,620ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 86%|████████▌ | 1290/1500 [00:41<00:07, 29.70it/s] 86%|████████▌ | 1293/1500 [00:41<00:07, 29.34it/s]2026-08-22 09:39:50 [56,796ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 86%|████████▋ | 1296/1500 [00:41<00:07, 29.03it/s]2026-08-22 09:39:50 [56,963ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 87%|████████▋ | 1300/1500 [00:41<00:06, 29.65it/s] 87%|████████▋ | 1303/1500 [00:41<00:06, 29.25it/s]2026-08-22 09:39:50 [57,137ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 87%|████████▋ | 1306/1500 [00:41<00:06, 29.24it/s]2026-08-22 09:39:50 [57,302ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 87%|████████▋ | 1310/1500 [00:41<00:06, 29.74it/s] 88%|████████▊ | 1314/1500 [00:42<00:06, 30.18it/s]2026-08-22 09:39:51 [57,465ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 88%|████████▊ | 1318/1500 [00:42<00:06, 29.64it/s]2026-08-22 09:39:51 [57,637ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 88%|████████▊ | 1322/1500 [00:42<00:05, 30.03it/s]2026-08-22 09:39:51 [57,806ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 88%|████████▊ | 1326/1500 [00:42<00:05, 29.68it/s] 89%|████████▊ | 1329/1500 [00:42<00:05, 29.56it/s]2026-08-22 09:39:51 [57,976ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 89%|████████▉ | 1332/1500 [00:42<00:05, 29.54it/s]2026-08-22 09:39:51 [58,140ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 89%|████████▉ | 1336/1500 [00:42<00:05, 29.47it/s]2026-08-22 09:39:51 [58,311ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 89%|████████▉ | 1340/1500 [00:42<00:05, 29.75it/s] 90%|████████▉ | 1343/1500 [00:43<00:05, 29.30it/s]2026-08-22 09:39:52 [58,488ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 90%|████████▉ | 1346/1500 [00:43<00:05, 29.24it/s] 90%|████████▉ | 1349/1500 [00:43<00:05, 29.19it/s]2026-08-22 09:39:52 [58,658ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 90%|█████████ | 1353/1500 [00:43<00:04, 29.47it/s]2026-08-22 09:39:52 [58,829ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 90%|█████████ | 1356/1500 [00:43<00:04, 29.30it/s] 91%|█████████ | 1359/1500 [00:43<00:04, 29.47it/s]2026-08-22 09:39:52 [58,994ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 91%|█████████ | 1363/1500 [00:43<00:04, 30.06it/s]2026-08-22 09:39:52 [59,159ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 91%|█████████ | 1366/1500 [00:43<00:04, 29.44it/s] 91%|█████████▏| 1369/1500 [00:43<00:04, 29.27it/s]2026-08-22 09:39:52 [59,342ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 91%|█████████▏| 1372/1500 [00:44<00:04, 28.24it/s]2026-08-22 09:39:53 [59,516ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 92%|█████████▏| 1376/1500 [00:44<00:04, 28.94it/s]2026-08-22 09:39:53 [59,681ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 92%|█████████▏| 1380/1500 [00:44<00:04, 29.34it/s] 92%|█████████▏| 1384/1500 [00:44<00:03, 29.81it/s]2026-08-22 09:39:53 [59,846ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 92%|█████████▏| 1387/1500 [00:44<00:03, 29.35it/s]2026-08-22 09:39:53 [60,019ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 93%|█████████▎| 1390/1500 [00:44<00:03, 29.46it/s] 93%|█████████▎| 1394/1500 [00:44<00:03, 29.77it/s]2026-08-22 09:39:53 [60,185ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 93%|█████████▎| 1398/1500 [00:44<00:03, 29.94it/s]2026-08-22 09:39:54 [60,355ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 93%|█████████▎| 1401/1500 [00:45<00:03, 29.58it/s] 94%|█████████▎| 1404/1500 [00:45<00:03, 29.39it/s]2026-08-22 09:39:54 [60,525ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 94%|█████████▍| 1407/1500 [00:45<00:03, 29.16it/s]2026-08-22 09:39:54 [60,699ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 94%|█████████▍| 1410/1500 [00:45<00:03, 29.12it/s] 94%|█████████▍| 1413/1500 [00:45<00:03, 28.86it/s]2026-08-22 09:39:54 [60,872ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 94%|█████████▍| 1417/1500 [00:45<00:02, 29.42it/s]2026-08-22 09:39:54 [61,036ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 95%|█████████▍| 1421/1500 [00:45<00:02, 29.62it/s] 95%|█████████▍| 1424/1500 [00:45<00:02, 29.07it/s]2026-08-22 09:39:54 [61,213ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 95%|█████████▌| 1427/1500 [00:45<00:02, 29.24it/s]2026-08-22 09:39:55 [61,384ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 95%|█████████▌| 1430/1500 [00:46<00:02, 29.00it/s] 96%|█████████▌| 1433/1500 [00:46<00:02, 28.93it/s]2026-08-22 09:39:55 [61,558ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 96%|█████████▌| 1436/1500 [00:46<00:02, 29.09it/s] 96%|█████████▌| 1439/1500 [00:46<00:02, 29.17it/s]2026-08-22 09:39:55 [61,728ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 96%|█████████▌| 1442/1500 [00:46<00:01, 29.27it/s]2026-08-22 09:39:55 [61,907ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 96%|█████████▋| 1445/1500 [00:46<00:01, 28.45it/s] 97%|█████████▋| 1449/1500 [00:46<00:01, 29.49it/s]2026-08-22 09:39:55 [62,068ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 97%|█████████▋| 1453/1500 [00:46<00:01, 30.17it/s]2026-08-22 09:39:55 [62,227ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 97%|█████████▋| 1457/1500 [00:46<00:01, 30.42it/s]2026-08-22 09:39:56 [62,391ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 97%|█████████▋| 1461/1500 [00:47<00:01, 30.33it/s]2026-08-22 09:39:56 [62,557ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 98%|█████████▊| 1465/1500 [00:47<00:01, 30.20it/s] 98%|█████████▊| 1469/1500 [00:47<00:01, 29.75it/s]2026-08-22 09:39:56 [62,729ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 98%|█████████▊| 1472/1500 [00:47<00:00, 29.65it/s]2026-08-22 09:39:56 [62,896ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 98%|█████████▊| 1476/1500 [00:47<00:00, 30.06it/s]2026-08-22 09:39:56 [63,057ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 99%|█████████▊| 1480/1500 [00:47<00:00, 30.29it/s] 99%|█████████▉| 1484/1500 [00:47<00:00, 30.95it/s]2026-08-22 09:39:56 [63,213ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 99%|█████████▉| 1488/1500 [00:47<00:00, 31.13it/s]2026-08-22 09:39:57 [63,372ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+ 99%|█████████▉| 1492/1500 [00:48<00:00, 30.72it/s]2026-08-22 09:39:57 [63,548ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+100%|█████████▉| 1496/1500 [00:48<00:00, 30.05it/s]2026-08-22 09:39:57 [63,706ms] [Warning] [isaaclab.sensors.ray_caster.ray_caster] Raycaster attribute 'attach_yaw_only' property will be deprecated in a future release. Please use the parameter 'ray_alignment' instead. Setting ray_alignment to 'yaw'.
+100%|██████████| 1500/1500 [00:48<00:00, 30.54it/s]100%|██████████| 1500/1500 [00:48<00:00, 31.03it/s]
+Mean reward: 24.99$\pm$9.32
+Mean episode length: 913.92$\pm$260.59
+Mean number of waypoints: 0.82$\pm$0.28
+Mean edge violation: 0.15$\pm$0.44
+[INFO] Metrics written to: /root/autodl-tmp/Isaaclab_Parkour/results_terrain/full/teacher_gap_medium.json
