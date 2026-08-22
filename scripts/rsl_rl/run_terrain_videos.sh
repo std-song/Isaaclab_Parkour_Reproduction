@@ -2,7 +2,8 @@
 set -u
 
 PROJECT_DIR="/root/autodl-tmp/Isaaclab_Parkour"
-VIDEO_DIR="$PROJECT_DIR/results_terrain/videos"
+VIDEO_DIR="${VIDEO_DIR:-$PROJECT_DIR/results_terrain/videos_600}"
+VIDEO_LENGTH="${VIDEO_LENGTH:-600}"
 TEACHER_CHECKPOINT="$PROJECT_DIR/pretrained_official/2025-08-13_05-15-58/model_49999.pt"
 STUDENT_CHECKPOINT="$PROJECT_DIR/pretrained_official/student_model_99998.pt"
 
@@ -43,7 +44,7 @@ run_policy() {
       --task "$task" \
       --headless \
       --video \
-      --video_length 300 \
+      --video_length "$VIDEO_LENGTH" \
       --video_folder "$temp_dir" \
       --num_envs 16 \
       --checkpoint "$checkpoint" \
