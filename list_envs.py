@@ -40,6 +40,7 @@ def main():
     table.align["Entry Point"] = "l"
     table.align["Config"] = "l"
 
+    
     # count of environments
     index = 0
     # acquire all Isaac environments names
