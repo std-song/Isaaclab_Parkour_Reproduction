@@ -109,4 +109,4 @@ python scripts/rsl_rl/demo.py --task Isaac-Extreme-Parkour-Student-Unitree-Go2-P
 
 ## 致谢
 
-最后感谢 [Isaaclab_Parkour](https://github.com/CAI23sbP/Isaaclab_Parkour) 提供的开源实现与官方检查点。
+最后感谢 [Isaaclab_Parkour](https://github.com/CAI23sbP/Isaaclab_Parkour) 提供的开源实现。
