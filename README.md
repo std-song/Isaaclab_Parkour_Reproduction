@@ -1,190 +1,112 @@
-# Isaaclab_Parkour
+# 四足机器人极限跑酷复现
 
-Isaaclab based Parkour locomotion 
+本仓库记录基于 Isaac Lab 的四足机器人跑酷策略复现，包括教师策略、深度视觉学生策略、正式评测、完整运行日志和演示视频。
 
-Base model: [Extreme-Parkour](https://extreme-parkour.github.io/)
+## 评测结果
 
-https://github.com/user-attachments/assets/aa9f7ece-83c1-404f-be50-6ae6a3ba3530
+已在 NVIDIA GeForce RTX 4090 24 GB 上完成 Teacher 与 Student 的正式评测。
 
+评测使用 256 个并行环境和 1,500 个仿真步。
 
-## How to install 
+| 策略 | 平均奖励 | 平均回合长度 | 路点完成率 | 边缘违规 |
+|---|---:|---:|---:|---:|
+| 教师策略 | 26.11 ± 7.24 | 924.49 ± 257.87 | 0.99 ± 0.04 | 0.16 ± 0.42 |
+| 学生策略 | 19.63 ± 8.78 | 893.85 ± 314.61 | 0.88 ± 0.28 | 0.15 ± 0.41 |
 
+完整评测配置、文件校验值、原始日志和演示视频见[结果汇总](results/official_checkpoints/README.md)。
+
+## 主要结论
+
+- 教师策略的平均路点完成率达到 0.99，能够稳定完成完整障碍路线。
+- 学生策略保留了教师策略约 96.7% 的平均回合长度，平均路点完成率达到 0.88。
+- 学生策略的平均奖励比教师策略低约 24.8%，但深度视觉策略仍能完成大部分跑酷任务。
+- 两种策略的边缘违规水平接近，差异远小于各自的标准差。
+
+## 安装方法
+
+先进入 Isaac Lab 所在目录，再克隆并安装本项目：
+
+```bash
+git clone <你的仓库地址>
+cd Isaaclab_Parkour
+pip install -e .
+cd parkour_tasks
+pip install -e .
 ```
-cd IsaacLab ## going to IsaacLab
-```
 
-```
-https://github.com/CAI23sbP/Isaaclab_Parkour.git ## cloning this repo
-```
+## 训练教师策略
 
-```
-cd Isaaclab_Parkour && pip3 install -e .
-```
-
-```
-cd parkour_tasks && pip3 install -e .
-```
-
-## How to train policies
-
-### 1.1. Training Teacher Policy
-
-```
+```bash
 python scripts/rsl_rl/train.py --task Isaac-Extreme-Parkour-Teacher-Unitree-Go2-v0 --seed 1 --headless
 ```
 
-### 1.2. Training Student Policy
+## 训练学生策略
 
-```
+```bash
 python scripts/rsl_rl/train.py --task Isaac-Extreme-Parkour-Student-Unitree-Go2-v0 --seed 1 --headless
 ```
 
-## How to play your policy 
+## 运行教师策略
 
-### 2.1. Pretrained Teacher Policy 
-
-Download Teacher Policy by this [link](https://drive.google.com/file/d/1JtGzwkBixDHUWD_npz2Codc82tsaec_w/view?usp=sharing)
-
-
-### 2.2. Playing Teacher Policy 
-
-```
+```bash
 python scripts/rsl_rl/play.py --task Isaac-Extreme-Parkour-Teacher-Unitree-Go2-Play-v0 --num_envs 16
 ```
 
-[Screencast from 2025년 08월 16일 12시 43분 38초.webm](https://github.com/user-attachments/assets/ff1f58db-2439-449c-b596-5a047c526f1f)
+## 评测教师策略
 
-
-### 2.3. Evaluation Teacher Policy
-
-```
-python scripts/rsl_rl/evaluation.py --task Isaac-Extreme-Parkour-Teacher-Unitree-Go2-Eval-v0 
+```bash
+python scripts/rsl_rl/evaluation.py --task Isaac-Extreme-Parkour-Teacher-Unitree-Go2-Eval-v0 --checkpoint <教师检查点路径> --headless
 ```
 
-### 3.1 Pretrained Student Policy 
+## 运行学生策略
 
-Download Student Policy by this [link](https://drive.google.com/file/d/1qter_3JZgbBcpUnTmTrexKnle7sUpDVe/view?usp=sharing)
-
-### 3.2. Playing Student Policy 
-
-```
+```bash
 python scripts/rsl_rl/play.py --task Isaac-Extreme-Parkour-Student-Unitree-Go2-Play-v0 --num_envs 16
 ```
 
-https://github.com/user-attachments/assets/82a5cecb-ffbf-4a46-8504-79188a147c40
+## 评测学生策略
 
-
-### 3.3. Evaluation Student Policy
-
-```
-python scripts/rsl_rl/evaluation.py --task Isaac-Extreme-Parkour-Student-Unitree-Go2-Eval-v0 
+```bash
+python scripts/rsl_rl/evaluation.py --task Isaac-Extreme-Parkour-Student-Unitree-Go2-Eval-v0 --checkpoint <学生检查点路径> --headless
 ```
 
-## How to deploy in IsaacLab
+## 仿真部署
 
-[Screencast from 2025년 08월 20일 18시 55분 01초.webm](https://github.com/user-attachments/assets/4fb1ba4b-1780-49b0-a739-bff0b95d9b66)
+教师策略：
 
-### 4.1. Deployment Teacher Policy 
-
-```
-python scripts/rsl_rl/demo.py --task Isaac-Extreme-Parkour-Teacher-Unitree-Go2-Play-v0 
+```bash
+python scripts/rsl_rl/demo.py --task Isaac-Extreme-Parkour-Teacher-Unitree-Go2-Play-v0
 ```
 
+学生策略：
 
-### 4.2. Deployment Student Policy 
-
-```
-python scripts/rsl_rl/demo.py --task Isaac-Extreme-Parkour-Student-Unitree-Go2-Play-v0 
-```
-
-## Testing your modules
-
-```
-cd parkour_test/ ## You can test your modules in here
+```bash
+python scripts/rsl_rl/demo.py --task Isaac-Extreme-Parkour-Student-Unitree-Go2-Play-v0
 ```
 
-## Visualize Control (ParkourViewportCameraController)
+## 相机控制
 
-```
-press 1 or 2: Going to environment
+- 按 `1` 或 `2`：切换到指定环境。
+- 按 `8`：相机向前移动。
+- 按 `4`：相机向左移动。
+- 按 `6`：相机向右移动。
+- 按 `5`：相机向后移动。
+- 按 `0`：启用鼠标自由相机。
+- 按 `1`：退出自由相机。
 
-press 8: camera forward    
+## 结果文件
 
-press 4: camera leftward   
+- [Teacher 演示视频](https://github.com/std-song/Isaaclab_Parkour_Reproduction/blob/codex/official-checkpoint-results/results/official_checkpoints/teacher_parkour.mp4)
+- [Student 演示视频](https://github.com/std-song/Isaaclab_Parkour_Reproduction/blob/codex/official-checkpoint-results/results/official_checkpoints/student_parkour.mp4)
+- [Teacher 完整评测日志](https://github.com/std-song/Isaaclab_Parkour_Reproduction/blob/codex/official-checkpoint-results/results/official_checkpoints/teacher_evaluation.log)
+- [Student 完整评测日志](https://github.com/std-song/Isaaclab_Parkour_Reproduction/blob/codex/official-checkpoint-results/results/official_checkpoints/student_evaluation.log)
+- [中文评测汇总](https://github.com/std-song/Isaaclab_Parkour_Reproduction/blob/codex/official-checkpoint-results/results/official_checkpoints/README.md)
+- [机器可读指标与校验值](https://github.com/std-song/Isaaclab_Parkour_Reproduction/blob/codex/official-checkpoint-results/results/official_checkpoints/metrics.json)
 
-press 6: camera rightward   
+## 兼容性说明
 
-press 5: camera backward
+本分支包含 Isaac Lab 2.1 所需的观测维度处理和无界面深度相机配置修改，用于正确加载并评测学生策略检查点。
 
-press 0: Use free camera (can use mouse)
+## 致谢
 
-press 1: Not use free camera (default)
-```
-
-
-## How to Deploy sim2sim or sim2real
-
-it is a future work, i will open this repo as soon as possible
-
-* [x] sim2sim: isaaclab to mujoco
-
-* [ ] sim2real: isaaclab to real world
-
-see this [repo](https://github.com/CAI23sbP/go2_parkour_deploy)
-
-
-### TODO list
-
-* [x] Opening code for training Teacher model  
-
-* [x] Opening code for training Distillation 
-
-* [x] Opening code for deploying policy in IsaacLab by demo: code refer [site](https://isaac-sim.github.io/IsaacLab/main/source/overview/showroom.html)  
-
-* [x] Opening code for deploying policy by sim2sim (mujoco)
-
-* [ ] Opening code for deploying policy in real world 
-
-## Citation
-
-If you use this code for your research, you **must** cite the following paper:
-
-```
-@article{cheng2023parkour,
-title={Extreme Parkour with Legged Robots},
-author={Cheng, Xuxin and Shi, Kexin and Agarwal, Ananye and Pathak, Deepak},
-journal={arXiv preprint arXiv:2309.14341},
-year={2023}
-}
-```
-
-```
-@article{mittal2023orbit,
-   author={Mittal, Mayank and Yu, Calvin and Yu, Qinxi and Liu, Jingzhou and Rudin, Nikita and Hoeller, David and Yuan, Jia Lin and Singh, Ritvik and Guo, Yunrong and Mazhar, Hammad and Mandlekar, Ajay and Babich, Buck and State, Gavriel and Hutter, Marco and Garg, Animesh},
-   journal={IEEE Robotics and Automation Letters},
-   title={Orbit: A Unified Simulation Framework for Interactive Robot Learning Environments},
-   year={2023},
-   volume={8},
-   number={6},
-   pages={3740-3747},
-   doi={10.1109/LRA.2023.3270034}
-}
-```
-
-```
-Copyright (c) 2025, Sangbaek Park
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software …
-
-The use of this software in academic or scientific publications requires
-explicit citation of the following repository:
-
-https://github.com/CAI23sbP/Isaaclab_Parkour
-```
-
-## contact us 
-
-```
-sbp0783@hanyang.ac.kr
-```
+最后感谢 [Isaaclab_Parkour](https://github.com/CAI23sbP/Isaaclab_Parkour) 提供的开源实现与官方检查点。

@@ -82,7 +82,7 @@ class UnitreeGo2StudentParkourEnvCfg_EVAL(UnitreeGo2StudentParkourEnvCfg):
         self.scene.depth_camera_usd = CAMERA_USD_CFG
         self.scene.terrain.max_init_terrain_level = None
 
-        self.observations.depth_camera.depth_cam.params['debug_vis'] = True
+        self.observations.depth_camera.depth_cam.params['debug_vis'] = False
 
         self.commands.base_velocity.resampling_time_range = (60.,60.)
         self.commands.base_velocity.debug_vis = True

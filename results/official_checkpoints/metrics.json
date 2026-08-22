@@ -1,0 +1,49 @@
+{
+  "evaluation_date": "2026-08-22",
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "vram_gb": 24
+  },
+  "protocol": {
+    "num_envs": 256,
+    "simulation_steps": 1500,
+    "video_num_envs": 16,
+    "video_frames": 500
+  },
+  "teacher": {
+    "task": "Isaac-Extreme-Parkour-Teacher-Unitree-Go2-Eval-v0",
+    "checkpoint": "model_49999.pt",
+    "checkpoint_sha256": "8ce79d7f9ed3b950982765d8359944b9e31a82162219116acd53b9dce4174e15",
+    "mean_reward": 26.11,
+    "reward_std": 7.24,
+    "mean_episode_length": 924.49,
+    "episode_length_std": 257.87,
+    "mean_waypoint_progress": 0.99,
+    "waypoint_progress_std": 0.04,
+    "mean_edge_violation": 0.16,
+    "edge_violation_std": 0.42,
+    "video": "teacher_parkour.mp4",
+    "video_duration_seconds": 9.98,
+    "video_resolution": [1280, 720],
+    "video_fps": 50.0,
+    "video_sha256": "4863f8c7a4e9028e6ce0892bc1df9240946aae8c15d0fe6c4166c5f1e29fe5e9"
+  },
+  "student": {
+    "task": "Isaac-Extreme-Parkour-Student-Unitree-Go2-Eval-v0",
+    "checkpoint": "model_99998.pt",
+    "checkpoint_sha256": "905754cd58b5ff14265e2a9b5bd500ba659075d93602c44b284aae37847478c0",
+    "mean_reward": 19.63,
+    "reward_std": 8.78,
+    "mean_episode_length": 893.85,
+    "episode_length_std": 314.61,
+    "mean_waypoint_progress": 0.88,
+    "waypoint_progress_std": 0.28,
+    "mean_edge_violation": 0.15,
+    "edge_violation_std": 0.41,
+    "video": "student_parkour.mp4",
+    "video_duration_seconds": 9.98,
+    "video_resolution": [1280, 720],
+    "video_fps": 50.0,
+    "video_sha256": "0810f1a5e38c21c897bd80fd4c5c44f78c3114aa1a86123d40d72929b2ead883"
+  }
+}
